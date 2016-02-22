@@ -1,0 +1,13 @@
+{
+    "name": "lembarek/profile",
+    "description": "the profile of the users",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lembarek",
+            "email": "lembarek2011@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
