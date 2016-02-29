@@ -1,6 +1,6 @@
 <?php
 
-namespace Lembarek\{{packageName}}\Repositories;
+namespace Lembarek\Profile\Repositories;
 
 use Lembarek\Core\Repositories\Repository as MainRepository;
 

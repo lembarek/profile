@@ -1,6 +1,6 @@
 <?php
 
-namespace Lembarek\{{packageName}}\Models;
+namespace Lembarek\Profile\Models;
 
 use Lembarek\Core\Models\Model as MainModel;
 
