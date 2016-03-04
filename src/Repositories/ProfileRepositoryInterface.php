@@ -2,7 +2,7 @@
 
 namespace Lembarek\Profile\Repositories;
 
-interface  ProfileRepositoryInterface
+interface ProfileRepositoryInterface
 {
 
 }

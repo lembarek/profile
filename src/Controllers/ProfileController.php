@@ -26,4 +26,15 @@ class ProfileController extends Controller
         $variables = $this->profileRepo->getForUser();
         return view('profile::index', compact('variables'));
     }
+
+    /**
+     * edit a variable
+     *
+     * @param  string  $name
+     * @return Response
+     */
+    public function edit($name)
+    {
+        $profile = $this->profileRepo->where('name', $name)->first();
+    }
 }

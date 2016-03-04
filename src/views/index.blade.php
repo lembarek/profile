@@ -9,7 +9,11 @@
     @foreach($variables as $key => $value)
         <tr>
             <td> {{ $key }} </td>
-            <td> {{ $value }} </td>
+            <td>
+                <a href="{{route('profile.edit', $key) }}">
+                {{ $value }}
+                </a>
+            </td>
         </tr>
    @endforeach
     <table>
