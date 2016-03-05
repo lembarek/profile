@@ -10,8 +10,8 @@
         <tr>
             <td> {{ $key }} </td>
             <td>
-                <a href="{{route('profile.edit', $key) }}">
-                {{ $value }}
+                <a href="{{ route('profile.edit', $key) }}">
+                    {{ $value }}
                 </a>
             </td>
         </tr>

@@ -2,7 +2,9 @@
 
 namespace Lembarek\Profile\Controllers;
 
+use Lembarek\Core\Schema\Schema;
 use Lembarek\Profile\Repositories\ProfileRepositoryInterface;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
@@ -27,6 +29,7 @@ class ProfileController extends Controller
         return view('profile::index', compact('variables'));
     }
 
+
     /**
      * edit a variable
      *
@@ -35,6 +38,23 @@ class ProfileController extends Controller
      */
     public function edit($name)
     {
-        $profile = $this->profileRepo->where('name', $name)->first();
+        return view('profile::edit.index', compact('name'));
+
+    }
+
+
+    /**
+     * to store a value in profile when edit
+     *
+     * @return Response
+     */
+    public function postEdit(Request $request)
+    {
+        $request = $request->except('_token');
+
+
+        $this->profileRepo->where('user_id', \Auth::user()->id)->update($request);
+
+        return redirect('profile');
     }
 }

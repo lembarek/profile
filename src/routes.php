@@ -14,6 +14,9 @@ Route::group(['middleware' => ['web']], function () {
         'uses' => ProfileController::class.'@edit',
         ]);
 
-
+    Route::post('/profile/edit', [
+        'as' => 'profile.edit.store',
+        'uses' => ProfileController::class.'@postEdit',
+        ]);
 
 });
