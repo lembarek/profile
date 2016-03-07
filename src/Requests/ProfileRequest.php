@@ -30,7 +30,7 @@ class ProfileRequest extends Request
 
     return [
         'birth_date' => 'date',
-        'sex' => 'in:male, female',
+        'sex' => 'in:male,female',
         'country' => "in:$all_countries",
     ];
     }
