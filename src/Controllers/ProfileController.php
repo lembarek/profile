@@ -5,6 +5,7 @@ namespace Lembarek\Profile\Controllers;
 use Lembarek\Core\Schema\Schema;
 use Lembarek\Profile\Repositories\ProfileRepositoryInterface;
 use Illuminate\Http\Request;
+use Lembarek\Profile\Requests\ProfileRequest;
 
 class ProfileController extends Controller
 {
@@ -48,7 +49,7 @@ class ProfileController extends Controller
      *
      * @return Response
      */
-    public function postEdit(Request $request)
+    public function postEdit(ProfileRequest $request)
     {
         $request = $request->except('_token');
 
