@@ -2,6 +2,8 @@
 
 namespace Lembarek\Profile\Providers;
 
+use \Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
+
 class ProfileServiceProvider extends ServiceProvider
 {
 
@@ -11,9 +13,10 @@ class ProfileServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(EventDispatcher $event)
     {
         $this->fullBoot('profile', __DIR__.'/../');
+        $event->listen('Lembarek\Auth\Events\UserHasCreated', 'Lembarek\Profile\Listeners\CreateDefaultProfile');
     }
 
     /**
