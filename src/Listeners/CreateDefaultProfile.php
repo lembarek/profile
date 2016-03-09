@@ -30,7 +30,7 @@ class CreateDefaultProfile
     */
     public function handle(UserHasCreated $event)
     {
-       $user_id = $event->user->id;
-       $this->profileRepo->create(compact('user_id'));
+        $user_id = $event->user->id;
+        $this->profileRepo->create(compact('user_id'));
     }
 }

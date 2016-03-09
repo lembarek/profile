@@ -14,7 +14,7 @@ class ProfileRequest extends Request
     */
     public function authorize()
     {
-    return true;
+        return true;
     }
 
     /**
@@ -24,16 +24,14 @@ class ProfileRequest extends Request
     */
     public function rules()
     {
-        $all_countries = array_reduce(Countries::$CountriesLongNames, function($r, $v){
+        $all_countries = array_reduce(Countries::$CountriesLongNames, function ($r, $v) {
             return $r.=$v.',';
         });
 
-    return [
+        return [
         'birth_date' => 'date',
         'sex' => 'in:male,female',
         'country' => "in:$all_countries",
-    ];
+        ];
     }
-
-
 }
