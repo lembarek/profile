@@ -56,6 +56,6 @@ class ProfileController extends Controller
 
         $this->profileRepo->where('user_id', \Auth::user()->id)->update($request);
 
-        return redirect('profile');
+        return redirect(route('profile::index'));
     }
 }
