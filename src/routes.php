@@ -1,8 +1,6 @@
 <?php
 
-use Lembarek\Profile\Controllers\ProfileController;
-
-Route::group(['as' => 'profile::', 'middleware' => ['web']], function () {
+Route::group(['as' => 'profile::', 'middleware' => ['web'], 'namespace' => 'Lembarek\Profile\Controllers'], function () {
 
     Route::get('/profile', [
         'as' => 'index',
