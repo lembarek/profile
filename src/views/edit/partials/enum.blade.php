@@ -1,13 +1,10 @@
-@inject('profile', 'Lembarek\Profile\Repositories\ProfileRepositoryInterface')
-<?php $selected = $profile->getForUser()[$name] ?>
+ <select name='{{ $name }}' class="select2" class="form-control">
 
- <select name='{{ $name }}' class="select2">
-
-    @foreach($schema->get_enum_values('profiles', $name) as $value)
-        @if($value === $selected)
-        <option value="{{$value}}" selected='selected'>{{ $value }}</option>
+    @foreach($schema->get_enum_values('profiles', $name) as $v)
+        @if($v === $value)
+        <option value="{{$v}}" selected='selected'>{{ $v }}</option>
         @else
-        <option value="{{$value}}">{{ $value }}</option>
+        <option value="{{$v}}">{{ $v }}</option>
         @endif
     @endforeach
 
