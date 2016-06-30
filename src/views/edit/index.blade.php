@@ -5,6 +5,8 @@
 @stop
 
 @inject('schema', 'Lembarek\Core\Schema\Schema')
+@inject('profileRepo', 'Lembarek\Profile\Repositories\ProfileRepositoryInterface')
+<?php $value = $profileRepo->getForUser()[$name]; ?>
 
 @section('content')
     <div class="container-fluid">
