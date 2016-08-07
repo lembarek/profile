@@ -49,7 +49,7 @@ class ProfileController extends Controller
      *
      * @return Response
      */
-    public function postEdit(ProfileRequest $request)
+    public function update(ProfileRequest $request)
     {
         $request = $request->except('_token');
 
