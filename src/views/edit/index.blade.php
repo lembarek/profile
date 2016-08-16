@@ -15,8 +15,9 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         @include('core::partials.errors')
-                        <form class="form-horizontal" role="form" method="POST" action="{{route('profile::edit.store')}}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{route('profile::profiles.update', ['profiles' => $name])}}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_method" value="PUT">
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">{{ $name }}</label>

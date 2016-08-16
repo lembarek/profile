@@ -51,11 +51,11 @@ class ProfileController extends Controller
      */
     public function update(ProfileRequest $request)
     {
-        $request = $request->except('_token');
+        $request = $request->except('_token', '_method');
 
 
         $this->profileRepo->where('user_id', \Auth::user()->id)->update($request);
 
-        return redirect(route('profile::index'));
+        return redirect(route('profile::profiles.index'));
     }
 }
