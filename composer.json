@@ -17,8 +17,8 @@
     "require": {
         "illuminate/support": "~5.3",
         "php" : ">=5.3.0",
-        "lembarek/core" : "dev-master@dev",
-        "lembarek/auth" : "dev-master@dev",
+        "lembarek/core" : "dev-master",
+        "lembarek/auth" : "dev-master",
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
