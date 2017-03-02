@@ -3,6 +3,6 @@
 use Lembarek\Profile\Models\Profile;
 function  createProfile($overs = [])
 {
-    return factory(Profile::class)->create($overs);
+    return ufactory(Profile::class)->create($overs);
 }
 
